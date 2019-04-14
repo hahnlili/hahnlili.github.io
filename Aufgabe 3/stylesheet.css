@@ -1,0 +1,45 @@
+body{
+    background-color: #cd8c95;
+    font-family: Arial;
+    text-align: center;
+ }
+ p {
+    font-family: 'Gloria Hallelujah', cursive;
+     color: #6e4a4f;
+     text-align: right
+ }
+
+ section{
+    background-color: #80575c;
+    width: 85%;
+    text-align: center;
+ }
+
+ article{
+     background-color: #312123;
+     color: beige;
+     width: 90%;
+     text-align: center;
+ }
+.Bild1{
+    height: 500px;
+    width: 500px;
+    border: 100px;
+    border-radius: 20px;
+}
+
+.Bild2{
+    height: 500px;
+}
+
+.Bild3{
+    height: 500px;
+}
+
+#Mail{
+    background-color: #312123;
+    color: #cd8c95;
+}
+footer{
+    background-color: beige;
+}
