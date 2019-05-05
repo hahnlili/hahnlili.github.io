@@ -55,9 +55,19 @@ section{
     text-align: center;
 }
 
+#section2 div{
+    height: 180px;
+    overflow: auto;
+}
+
 #section1{
     float: left;
     background-color: aquamarine;
+}
+
+#section3{
+    display: inline-block;
+    width: 100%;
 }
 
 article{
@@ -67,6 +77,10 @@ article{
 footer{
     width: 100%;
     text-align: right;
+}
+
+.content{
+    width: 10%;
 }
 
 .aufgabe5 {
@@ -79,9 +93,14 @@ footer{
 
  
 }
+.aufgabe5 p{
+    height: 150px;
+    overflow: auto;
+    background-color: #666;
+}
 
 .aufgabe5:nth-child(3n +1) {
-
+ margin-left: 45px;
 }
 
 .fünf{
