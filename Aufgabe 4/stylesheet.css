@@ -1,0 +1,93 @@
+header{
+    width: 100%;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    font-family: 'Franklin Gothic Medium';
+    background-color: grey;
+}
+
+nav{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium';
+    color: white;
+}
+
+li{
+    list-style: none;
+    margin: 15px;
+}
+
+.start{
+    color: grey;
+}
+
+aside{
+    float: left;
+    display: inline-block;
+    text-align: justify;
+    color: white;
+    width: 20%;
+    font-size: 20pt;
+    background-color: blue;
+    height: 80%;
+}
+aside:hover{
+    color: red;
+    transform: translate(50px);
+}
+main{
+    display: inline-block;
+    margin: 30px;
+    background-color: grey;
+    width: 60%;
+
+}
+
+section{
+    text-align: center;
+}
+
+#section1{
+    float: left;
+    background-color: aquamarine;
+}
+
+article{
+    margin: 15px;
+}
+
+footer{
+    width: 100%;
+    text-align: right;
+}
+
+.aufgabe5 {
+    position        : relative;
+    display         : inline-block;
+    width           : 150px;
+    height          : 150px;
+    margin          : 20px;
+    background-color: #666;
+
+ 
+}
+
+.aufgabe5:nth-child(3n +1) {
+
+}
+
+.fünf{
+    width           : 150px;
+    height          : 150px;
+}
+.irgendeineklasse{
+    margin: auto;
+}

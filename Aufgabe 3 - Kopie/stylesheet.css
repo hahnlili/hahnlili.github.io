@@ -1,0 +1,74 @@
+html {
+    text-align: center;
+}
+
+
+header{
+    width: 100%;
+}
+
+body{
+    background-color: grey;
+    font-family: Arial;
+    text-align: center;
+    align-content: center;
+ }
+ p {
+    font-family: Arial, Helvetica, sans-serif;
+     color: #6e4a4f;
+     text-align: right
+ }
+
+nav{
+    text-align: left;
+}
+
+aside{ 
+    width: 20%;
+}
+
+ li{
+     margin: 15px;
+     list-style: none;
+ }
+main{
+    width: 60%;
+    text-align: center;
+    align-content: center;
+    
+    
+}
+ section{
+    background-color: #80575c;
+    width: 85%;
+    text-align: center;
+ }
+
+ article{
+     background-color: #312123;
+     color: beige;
+     width: 90%;
+     text-align: center;
+ }
+.Bild1{
+    height: 500px;
+    width: 500px;
+    border: 100px;
+    border-radius: 20px;
+}
+
+.Bild2{
+    height: 500px;
+}
+
+.Bild3{
+    height: 500px;
+}
+
+#Mail{
+    background-color: #312123;
+    color: #cd8c95;
+}
+footer{
+    background-color: beige;
+}
