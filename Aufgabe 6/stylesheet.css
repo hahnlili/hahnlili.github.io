@@ -1,0 +1,159 @@
+body{
+    background-color: grey;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+}
+nav{
+    font-size: 15pt;
+    text-align: left;
+    position: fixed;
+}
+
+#menu{
+    text-align: center;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    background-color:white;
+
+}
+#dropdown{
+    position: absolute;
+    text-align: left;
+    visibility: hidden;
+    padding: 1%;
+    width: 90px;
+    padding-left: 2%;
+    list-style-type: none;
+    margin-top: -19px;
+    height: 0;
+    overflow: hidden;
+    transition: 200ms linear;
+    
+}
+li{
+    margin-top: 3%;
+    display: block;
+}
+
+
+#menu:hover + #dropdown{
+    border-radius: 5px;
+    background-color: white;
+    visibility: visible;
+    height: 111px;
+
+}
+
+#dropdown:hover{
+    border-radius: 5px;
+    background-color: white;
+    display: block;
+    visibility: visible;
+    height: 111px;
+    
+}
+
+aside{
+    float: left;
+    display: inline-block;
+    text-align: justify;
+    color: white;
+    width: 20%;
+    font-size: 20pt;
+    height: 80%;
+    border-left-style: solid;
+    border-left-color: black;
+    padding-left: 10px;
+    font-size: 15pt;
+}
+
+.aside{
+    width: 200px;
+}
+
+main {
+    display: inline-block;
+    background-color: white;
+    width: 60%;
+    padding: 10px;
+}
+
+#section1{
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-left: 20px;
+}
+#section2{
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-left: 20px;
+}
+#section3{
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-left: 20px;
+}
+article{
+    text-align: justify;
+    margin-top: 15px;
+}
+.sectionbild{
+    width: 80%;
+    height: 80%;
+}
+
+.aufgabe5{
+    margin-top: 20px;
+    background-color:grey;
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.container{
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    float: left;
+    display: block;
+    text-align: center;
+   
+}
+p{
+    text-align: justify;
+
+}
+.bild{
+    width: 150px;
+    height: 150px;
+}
+.container p{
+    height: 120px;
+    overflow: auto;
+}
+footer{
+    height: 100px;
+    background-color: white;
+    margin-top: 20px;
+}
+.anschrift{
+    background-color: white;
+    margin-top: 20px;
+}
+@media only screen and (max-width: 800px){
+
+body{
+    background-color: blue;
+}
+
+}
+

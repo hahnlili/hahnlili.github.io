@@ -79,9 +79,6 @@ footer{
     text-align: right;
 }
 
-.content{
-    width: 10%;
-}
 
 .aufgabe5 {
     position        : relative;
@@ -90,6 +87,8 @@ footer{
     height          : 150px;
     margin          : 20px;
     background-color: #666;
+    float           : left;
+
 
  
 }
