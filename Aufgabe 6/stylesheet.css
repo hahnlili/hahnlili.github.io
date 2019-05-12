@@ -149,11 +149,165 @@ footer{
     background-color: white;
     margin-top: 20px;
 }
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1025px) and (orientation: landscape){
 
-body{
-    background-color: blue;
+/*firefox mobiledevices emulator orientiert*/
+
+.aside{
+        width: 150px;
+}
+    
+
+#section1{
+    float: left;
+    width: 40%;
+    text-align: center;
+    margin-left: 25px;
+}
+#section2{
+    float: left;
+    width: 40%;
+    text-align: center;
+    margin-left: 50px;
+}
+#section3{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-left: 0px;
+}
+#section3 article{
+    width: 500px;
+    text-align: center;
+    margin-left: 9%;
+}
+.container{
+    margin: 40px;
+    width: 150px;
+    height: 250px;
+    float: left;
+    display: block;
+    text-align: center; 
 }
 
 }
 
+@media only screen and (max-width: 769px) and (orientation: portrait){
+
+.aside{
+    width: 120px;
+    font-size: 12pt;
+}
+
+#section1{
+    float: left;
+    width: 40%;
+    text-align: center;
+    margin-left: 25px;
+}
+#section2{
+    float: left;
+    width: 40%;
+    text-align: center;
+    margin-left: 25px;
+}
+#section3{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-left: 0px;
+}
+.aufgabe5{
+    margin-top: 20px;
+    background-color:grey;
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+.container{
+
+    width: 120px;
+    height: 250px;
+    float: left;
+    display: block;
+    text-align: center; 
+    margin: 35px;
+    margin-top: 20px;
+}
+
+}
+
+
+@media only screen and (max-width: 361px){
+
+    aside{
+        display: inline-block;
+        text-align: justify;
+        color: white;
+        width: 100%;
+        font-size: 20pt;
+        height: 80%;
+        border-left-style: solid;
+        border-left-color: black;
+        padding-left: 10px;
+        font-size: 15pt;
+    }
+    
+    .aside{
+        width: 90%;
+    }
+
+main{
+    width: 90%;
+    background-color: grey;
+}
+
+    #section1{
+        float: left;
+        width: 90%;
+        text-align: center;
+        
+    }
+    #section2{
+        float: left;
+        width: 90%;
+        text-align: center;
+       
+    }
+    #section3{
+        float: left;
+        width: 90%;
+        text-align: center;
+        margin-left: 25px;
+    }
+    .aufgabe5{
+        border-top-style: dashed;
+        border-top-color: black;
+        margin-top: 20px;
+        background-color:grey;
+        float: left;
+        width: 100%;
+        margin-left: -3%;
+        
+        
+    }
+    
+    .container{
+    
+        width: 90%;
+        height: 250px;
+        float: left;
+        display: block;
+        text-align: center; 
+        margin: 35px;
+        margin-top: 60px;
+    }
+    .bild{
+        width: 200px;
+        height: 200px;
+    }
+
+}
