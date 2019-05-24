@@ -95,7 +95,7 @@ main {
     margin-left: 20px;
 }
 #section3{
-    float: left;
+    float: clear;
     width: 30%;
     text-align: center;
     margin-left: 20px;
