@@ -95,7 +95,7 @@ main {
     margin-left: 20px;
 }
 #section3{
-    clear: left;
+    float: left;
     width: 30%;
     text-align: center;
     margin-left: 20px;
@@ -127,6 +127,14 @@ article{
     display: block;
     text-align: center;
    
+}
+.containerend{
+    clear: left;
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    display: block;
+    text-align: center;
 }
 p{
     text-align: justify;
