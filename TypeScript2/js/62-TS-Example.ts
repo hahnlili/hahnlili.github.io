@@ -32,6 +32,10 @@ interface Monster {
 // ------- Variablen -------- //
 // INSGESAMT EINGEBAUTE FEHLER bei den Variablen: I (1 / einer)
 
+
+// !!!!Ich habe bei allen Bildern in der google Suche angegeben das sie zur Freien Verwendung sind!!! Hoffe das reicht so, sonst ändere ich das!
+
+
 let monsterHolder : string = "monsterHoldingCell";                                  // ID für das Haupt-Element, in welchem die Monster sich befinden werden. Wird vielleicht mehrfach in dem Skript gebraucht, deshalb einmalig definitiert.
 
 let playerName : string = "Marleen";                                            // Ein paar globale Variablen, welche den Spieler darstellen.
