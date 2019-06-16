@@ -42,7 +42,7 @@ function neuesArray(zahl) {
 // Generiert ein neues Monster. Dieses wird zu dem Monster-Array hinzugefügt.
 // Ruft eine Funktion auf, welche dann das entsprechende HTML erzeugt.
 function generateMonster() {
-    let rndNumb = getRNGNumber(3) + 1;
+    let rndNumb = getRNGNumber(2) + 1;
     for (let i = 0; i < rndNumb; i++) {
         let newMonsterName = generateMonsterName(); // Eigens-gebaute Funktion, welche einen string zurück gibt.
         let newMonsterHP = generateMonsterHitPoints(); // Eigens-gebaute Funktion, welche eine Zahl zurück gibt.
@@ -63,13 +63,17 @@ function generateMonster() {
         };
         monsterArray.push(newMonster); // Monster wird erst in diesem Schritt zu dem Array hinzugefügt 
         console.log(monsterArray[monsterArray.length - 1].monsterExperience); // hinzugefügt.  Man kann nur auf Array-Teile zugreifen, welche definiert sind. -1 ist nicht definitiert (und wird es auch nie sein).
+        updateHTML();
     }
-    updateHTML();
     // Triggere die Generierung von HTML
 }
 function updateHTML() {
     clearMonsterCell();
     monsterGenerateHTMLAll();
+    console.log(getMonsterCount());
+}
+function getMonsterCount() {
+    return monsterArray.length;
 }
 function generateMonsterImgPfad() {
     let newMonsterImgPfad = "";
@@ -91,18 +95,17 @@ function generateMonsterLieblingsGetränk() {
 }
 function clearMonsterCell() {
     let monsterHoldingCell = document.getElementById("monsterHoldingCell");
-    for (var i = 0; i <= monsterHoldingCell.childElementCount; i++) {
-        monsterHoldingCell.firstChild.remove;
+    while (monsterHoldingCell.firstChild) {
+        monsterHoldingCell.removeChild(monsterHoldingCell.firstChild);
     }
 }
 function monsterGenerateHTMLAll() {
-    for (let i = 0; i <= monsterArray.length; i++) {
+    for (let i = 1; i <= monsterArray.length; i++) {
         monsterGenerateHTML(i);
     }
 }
 // Generiert HTML-Elemente, welche dann einem Element untergeordnet werden. Erzeugt ebenfalls einen Event-Listener auf dem Button.
 function monsterGenerateHTML(i) {
-    console.log("Monster Array - 1 ist gleich : " + (monsterArray.length - 1));
     let holdingDiv = document.createElement("div"); // Erstelle ein neues HTML-Element vom typ <div>. Es ist jedoch noch nicht zu sehen!
     holdingDiv.setAttribute("id", "monster" + i); // Die ID jedes neu-erstellten Monsters entspricht der aktuellen Array-Länge.
     holdingDiv.setAttribute("class", "monster"); // Klasse für Visuals.
@@ -124,7 +127,6 @@ function monsterGenerateHTML(i) {
     holdingDiv.appendChild(monsterHealthPoints);
     let monsterImg = document.createElement("img"); // Erstelle ein <img>-Element
     monsterImg.setAttribute("src", monsterArray[i - 1].monsterImgPfad); // Der Pfad für das Bild muss über setAttribute festgelegt werden. Der Bildpfad kann natürlich auch anders aussehen.
-    console.log(monsterArray[i - 1].monsterImgPfad);
     monsterImg.setAttribute("alt", "Schreckliches Monster"); // Das alt für das Bild wird hier festgelegt.
     holdingDiv.appendChild(monsterImg); // Füge das Bild zu dem holding-div hinzu (<div>, welche ein paar Zeilen zuvor erstellt worden ist)
     let monsterBtn = document.createElement("BUTTON"); // Erstelle ein <button>-Element
@@ -193,7 +195,9 @@ function fightMonster(_index) {
     console.log("Das Monster weigert sich zu verschwinden."); // Wird nächste Stunde erweitert.
     console.log(_index);
     playerXP += monsterArray[_index - 1].monsterExperience; // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
+    monsterArray.splice(_index - 1, 1);
     updatePlayerLevel();
+    updateHTML();
 }
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.
 function updatePlayerLevel() {
