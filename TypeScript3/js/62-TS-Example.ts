@@ -88,7 +88,7 @@ function neuesArray(zahl : number){
 
 function generateMonster()
 {
-    let rndNumb : number = getRNGNumber(2) + 1;
+    let rndNumb : number = getRNGNumber(3) + 1;
 
     for(let i : number = 0; i < rndNumb; i++) {
 
@@ -115,10 +115,10 @@ function generateMonster()
         monsterArray.push(newMonster);                                      // Monster wird erst in diesem Schritt zu dem Array hinzugefügt 
     
         console.log(monsterArray[monsterArray.length-1].monsterExperience); // hinzugefügt.  Man kann nur auf Array-Teile zugreifen, welche definiert sind. -1 ist nicht definitiert (und wird es auch nie sein).
-        updateHTML();
+        
     }
 
-    
+    updateHTML();
 
                                                 // Triggere die Generierung von HTML
 }
@@ -220,7 +220,7 @@ function monsterGenerateHTML(i : number)
 
     monsterBtn.addEventListener(                                        // Füge dem Monster eine Funktion hinzu.
         'click', function() {                                           // Wird bei Maus-Click ausgelöst.
-            fightMonster(monsterCount);                                 // Wenn das Monster erstellt wird erhält die Funktion einen Parameter, welcher der aktuellen Anzahl entspricht.
+            fightMonster(i);                                 // Wenn das Monster erstellt wird erhält die Funktion einen Parameter, welcher der aktuellen Anzahl entspricht.
         }, false);                                                      // Ignoriert das false.
 }
 
@@ -305,10 +305,14 @@ function fightMonster(_index : number)
     console.log(_index);
     playerXP += monsterArray[_index - 1].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
 
-    monsterArray.splice(_index - 1, 1);
-
     updatePlayerLevel();
+
+    console.log(monsterArray.splice(_index - 1, 1));
+
+    //monsterArray.sp
     updateHTML();
+    
+
 }
 
 

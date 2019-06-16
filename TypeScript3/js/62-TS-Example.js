@@ -42,7 +42,7 @@ function neuesArray(zahl) {
 // Generiert ein neues Monster. Dieses wird zu dem Monster-Array hinzugefügt.
 // Ruft eine Funktion auf, welche dann das entsprechende HTML erzeugt.
 function generateMonster() {
-    let rndNumb = getRNGNumber(2) + 1;
+    let rndNumb = getRNGNumber(3) + 1;
     for (let i = 0; i < rndNumb; i++) {
         let newMonsterName = generateMonsterName(); // Eigens-gebaute Funktion, welche einen string zurück gibt.
         let newMonsterHP = generateMonsterHitPoints(); // Eigens-gebaute Funktion, welche eine Zahl zurück gibt.
@@ -63,8 +63,8 @@ function generateMonster() {
         };
         monsterArray.push(newMonster); // Monster wird erst in diesem Schritt zu dem Array hinzugefügt 
         console.log(monsterArray[monsterArray.length - 1].monsterExperience); // hinzugefügt.  Man kann nur auf Array-Teile zugreifen, welche definiert sind. -1 ist nicht definitiert (und wird es auch nie sein).
-        updateHTML();
     }
+    updateHTML();
     // Triggere die Generierung von HTML
 }
 function updateHTML() {
@@ -136,7 +136,7 @@ function monsterGenerateHTML(i) {
     console.log("Aktuelle Anzahl an Monstern: " + monsterCount);
     monsterBtn.addEventListener(// Füge dem Monster eine Funktion hinzu.
     'click', function () {
-        fightMonster(monsterCount); // Wenn das Monster erstellt wird erhält die Funktion einen Parameter, welcher der aktuellen Anzahl entspricht.
+        fightMonster(i); // Wenn das Monster erstellt wird erhält die Funktion einen Parameter, welcher der aktuellen Anzahl entspricht.
     }, false); // Ignoriert das false.
 }
 // Wird für den Zugriff auf eine zufällige Stelle in einem Array aufgerufen.
@@ -195,8 +195,9 @@ function fightMonster(_index) {
     console.log("Das Monster weigert sich zu verschwinden."); // Wird nächste Stunde erweitert.
     console.log(_index);
     playerXP += monsterArray[_index - 1].monsterExperience; // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-    monsterArray.splice(_index - 1, 1);
     updatePlayerLevel();
+    console.log(monsterArray.splice(_index - 1, 1));
+    //monsterArray.sp
     updateHTML();
 }
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.
