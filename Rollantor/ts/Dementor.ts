@@ -6,7 +6,7 @@ namespace Rollantor {
         private pos: Vector = new Vector(0, 0);
         private velocity: Vector = new Vector(0, 0);
         private speed: number = 0;
-        private maxSpeed: number = &=;
+        private maxSpeed: number = 60;
         private accel: number = 0.1;
         private rot: number = 0;
         private rotFacMax: number = 3;
